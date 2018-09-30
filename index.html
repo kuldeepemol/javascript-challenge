@@ -38,29 +38,30 @@
                     <ul class="list-group" id="filters">
                       <li class="filter list-group-item">
                         <label for="date">Enter a Date</label>
-                        <input class="form-control" id="datetime" type="text" placeholder="1/11/2010">
+                        <input class="form-control" id="datetime" type="text" placeholder="1/11/2010" autocomplete="random">
                       </li>
                       <li class="filter list-group-item">
                         <label for="city">Enter a City</label>
-                        <input class="form-control" id="city" type="text" placeholder="joplin">
+                        <input class="form-control" id="city" type="text" placeholder="san diego" autocomplete="nope">
                       </li>
                       <li class="filter list-group-item">
                         <label for="state">Enter a State</label>
-                        <input class="form-control" id="state" type="text" placeholder="mo">
+                        <input class="form-control" id="state" type="text" placeholder="mo" autocomplete="random">
                       </li>
                       <li class="filter list-group-item">
-                        <label for="country">Enter a Country</label>
-                        <input class="form-control" id="country" type="text" placeholder="us">
+                        <label for="country">Select a Country</label>
+                        <select class="form-control" id="country-dd" placeholder="select">
+                          <option value="">---Select---</option>
+                        </select>
                       </li>
                       <li class="filter list-group-item">
-                        <label for="shape">Enter a Shape</label>
-                        <input class="form-control" id="shape" type="text" placeholder="triangle">
+                        <label for="shape">Select a Shape</label>
+                        <select class="form-control" id="shape-dd" placeholder="select">
+                          <option value="">---Select---</option>
+                        </select>
                       </li>
                       <li class="filter list-group-item">
-                        <button id="filter-btn" type="submit" class="btn btn-primary">Filter Table</button>
-                      </li>
-                      <li class="filter list-group-item">
-                        <button id="show-all-btn" type="submit" class="btn btn-primary btn-sm">Show All</button>
+                        <button id="clear-all-btn" type="submit" class="btn btn-primary btn-sm">Clear All</button>
                       </li>
                     </ul>
                   </div>
@@ -70,6 +71,8 @@
           </aside>
         </div>
         <div class="col-md-10">
+          <div id="results-count">
+          </div>
           <div id="table-area" class="">
             <table id="ufo-table" class="table table-striped">
               <thead>
